@@ -1,0 +1,24 @@
+Strategy - Pattern
+==================
+
+Beim definieren einer class kann man erben in dem man im Parameter den Namen dieser Klasse angibt.
+Wird verwendet für attribut referenzen: Wenn ein benötigtes attribut nicht in dieser Klasse gefunden wird,
+wird in der Basis Klasse(welche im Parameter übergeben wurde) gesucht.
+
+Abgeleitete klassen können methoden von der Basis Klasse überschreiben
+
+
+.. py:module:: Strategys.Strategy
+.. autoclass:: BellVerhalten
+	:members:
+.. autoclass:: LautBellen
+	:members:
+.. autoclass:: LeiseBellen
+	:members:
+.. autoclass:: ElektronischBellen
+	:members:
+.. autoclass:: AngstBellen
+	:members:
+.. autoclass:: Hund
+	:members:
+

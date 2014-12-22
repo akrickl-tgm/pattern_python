@@ -1,0 +1,22 @@
+Command - Pattern
+=================
+
+Mit dem Command-Design Pattern kann man bestimmte Aktionen einer Methode oder einem Objekt übergeben
+=> Ein Befehl als Objekt kapseln:
+
+Dies ermöglicht es, Klienten mit verschiedenen Anfragen zu parametrisieren,
+Operationen in eine Schlange zu stellen, ein Logbuch zu führen und Operationen rückgängig zu machen.
+
+
+.. py:module:: Command.Command
+.. autoclass:: DruckBefehl
+	:members:
+.. autoclass:: SchwarzWeissDruck
+	:members:
+.. autoclass:: FarbDruck
+	:members:
+.. autoclass:: PDFDruck
+	:members:
+.. autoclass:: Drucker
+	:members:
+

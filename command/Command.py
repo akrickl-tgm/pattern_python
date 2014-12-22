@@ -1,5 +1,4 @@
 __author__ = 'Berkay'
-
 """
 Mit dem Command-Design Pattern kann man bestimmte Aktionen einer Methode oder einem Objekt übergeben
 => Ein Befehl als Objekt kapseln:
@@ -10,10 +9,17 @@ Operationen in eine Schlange zu stellen, ein Logbuch zu führen und Operationen 
 """
 # Sozuasgen das Interface
 class DruckBefehl:
-    def drucken(self): pass
+    """
+    Dient sozusagen als "Interface", wird von anderen abgeleitet
+    """
+    def drucken(self):
+        pass
 
 # konkrete Durchführung
 class SchwarzWeissDruck(DruckBefehl):
+    """
+    SchwarzWeiß - Drucker
+    """
     def drucken(self):
         """
         druckt Schwarz/Weiss aus
@@ -23,6 +29,9 @@ class SchwarzWeissDruck(DruckBefehl):
 
 # konkrete Durchführung
 class FarbDruck(DruckBefehl):
+    """
+    FarbDruck - Drucker
+    """
     def drucken(self):
         """
         druckt FARBIG aus
@@ -32,16 +41,21 @@ class FarbDruck(DruckBefehl):
 
 # konkrete Durchführung
 class PDFDruck(DruckBefehl):
+    """
+    PDFDruck - Drucker
+    """
     def drucken(self):
         """
-        druckt PDF aus
-        :return: _string
+        druckt PDF aus - Ausgabe durch print(..)
         """
         print("==== PDF - Druck ====")
 
 
 # An object that holds commands:
 class Drucker:
+    """
+    Drucker das die Commandos hält
+    """
     def __init__(self):
         """
         Beim Aufruf dieser Klasse
@@ -65,10 +79,6 @@ class Drucker:
         """
         for c in self.druckAuftraege:
             c.drucken()
-
-    def changeDruckAuftrag(self):
-        pass
-
 
 # Beispiel - Client
 meinDrucker = Drucker()

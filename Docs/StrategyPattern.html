@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Strategy - Pattern &mdash; A05 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="A05 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Command - Pattern" href="CommandPattern.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="CommandPattern.html" title="Command - Pattern"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">A05 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="strategy-pattern">
+<h1>Strategy - Pattern<a class="headerlink" href="#strategy-pattern" title="Permalink to this headline">¶</a></h1>
+<p>Beim definieren einer class kann man erben in dem man im Parameter den Namen dieser Klasse angibt.
+Wird verwendet für attribut referenzen: Wenn ein benötigtes attribut nicht in dieser Klasse gefunden wird,
+wird in der Basis Klasse(welche im Parameter übergeben wurde) gesucht.</p>
+<p>Abgeleitete klassen können methoden von der Basis Klasse überschreiben</p>
+<span class="target" id="module-Strategys.Strategy"></span><dl class="class">
+<dt id="Strategys.Strategy.BellVerhalten">
+<em class="property">class </em><tt class="descclassname">Strategys.Strategy.</tt><tt class="descname">BellVerhalten</tt><a class="headerlink" href="#Strategys.Strategy.BellVerhalten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Das Strategy &#8220;Interface&#8221; - wird von anderen Klassen geerbt</p>
+<dl class="method">
+<dt id="Strategys.Strategy.BellVerhalten.bellen">
+<tt class="descname">bellen</tt><big>(</big><big>)</big><a class="headerlink" href="#Strategys.Strategy.BellVerhalten.bellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>leere Methode bellen() wird von anderen geerbt und evt. überschrieben</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Strategys.Strategy.LautBellen">
+<em class="property">class </em><tt class="descclassname">Strategys.Strategy.</tt><tt class="descname">LautBellen</tt><a class="headerlink" href="#Strategys.Strategy.LautBellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Strategie: Laut bellen</p>
+<dl class="method">
+<dt id="Strategys.Strategy.LautBellen.bellen">
+<tt class="descname">bellen</tt><big>(</big><big>)</big><a class="headerlink" href="#Strategys.Strategy.LautBellen.bellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bringt den Hund zum Bellen</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Strategys.Strategy.LeiseBellen">
+<em class="property">class </em><tt class="descclassname">Strategys.Strategy.</tt><tt class="descname">LeiseBellen</tt><a class="headerlink" href="#Strategys.Strategy.LeiseBellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Strategie: Leise bellen</p>
+<dl class="method">
+<dt id="Strategys.Strategy.LeiseBellen.bellen">
+<tt class="descname">bellen</tt><big>(</big><big>)</big><a class="headerlink" href="#Strategys.Strategy.LeiseBellen.bellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bringt den Hund zum Bellen</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Strategys.Strategy.ElektronischBellen">
+<em class="property">class </em><tt class="descclassname">Strategys.Strategy.</tt><tt class="descname">ElektronischBellen</tt><a class="headerlink" href="#Strategys.Strategy.ElektronischBellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Strategie: Elektronisch bellen</p>
+<dl class="method">
+<dt id="Strategys.Strategy.ElektronischBellen.bellen">
+<tt class="descname">bellen</tt><big>(</big><big>)</big><a class="headerlink" href="#Strategys.Strategy.ElektronischBellen.bellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bringt den Hund zum Bellen</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Strategys.Strategy.AngstBellen">
+<em class="property">class </em><tt class="descclassname">Strategys.Strategy.</tt><tt class="descname">AngstBellen</tt><a class="headerlink" href="#Strategys.Strategy.AngstBellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Strategie: Aus Angst bellen</p>
+<dl class="method">
+<dt id="Strategys.Strategy.AngstBellen.bellen">
+<tt class="descname">bellen</tt><big>(</big><big>)</big><a class="headerlink" href="#Strategys.Strategy.AngstBellen.bellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bringt den Hund zum Bellen</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Strategys.Strategy.Hund">
+<em class="property">class </em><tt class="descclassname">Strategys.Strategy.</tt><tt class="descname">Hund</tt><big>(</big><em>strategy</em><big>)</big><a class="headerlink" href="#Strategys.Strategy.Hund" title="Permalink to this definition">¶</a></dt>
+<dd><p>Die Context Klassen zum Kontrollieren der Strategie</p>
+<dl class="method">
+<dt id="Strategys.Strategy.Hund.bellen">
+<tt class="descname">bellen</tt><big>(</big><big>)</big><a class="headerlink" href="#Strategys.Strategy.Hund.bellen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ruft die bell() Methode je nach Strategie auf
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Strategys.Strategy.Hund.changeBellVerhalten">
+<tt class="descname">changeBellVerhalten</tt><big>(</big><em>newBellVerhalten</em><big>)</big><a class="headerlink" href="#Strategys.Strategy.Hund.changeBellVerhalten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verändert das Bell Verhalten
+:param newBellVerhalten:
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="CommandPattern.html"
+                        title="previous chapter">Command - Pattern</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/StrategyPattern.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="CommandPattern.html" title="Command - Pattern"
+             >previous</a> |</li>
+        <li><a href="index.html">A05 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, SECKIN.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
