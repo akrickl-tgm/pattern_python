@@ -11,7 +11,7 @@ class UpperCase(Decorator):
         konstruktor der ein das txtobjekt zu uppercase macht
         :param txt: text der verändert wird
         """
-        txtel = self.toString(txt)
+        self.txtel = self.toString(txt)
 
     def toString(self, txt):
         """
@@ -30,7 +30,7 @@ class Break(Decorator):
         konstruktor der einen zeilenumbruch in den text einfügt
         :param txt: text der verändert wird
         """
-        txtel = self.toString(txt)
+        self.txtel = self.toString(txt)
 
     def toString(self, txt):
         """
@@ -49,7 +49,7 @@ class PygLatin(Decorator):
         konstruktor der text in pyglatin umwandelt
         :param txt: text der umgewandelt wird
         """
-        txtel = self.toString(txt)
+        self.txtel = self.toString(txt)
 
     def toString(self, txt):
         """
