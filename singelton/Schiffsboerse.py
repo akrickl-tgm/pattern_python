@@ -8,7 +8,6 @@ class Schiffsboerse:
     def __init__(self):
         """
         legt eine neue schiffsboerse an falls noch keine vorhanden ist, ansonsten passiert nichts
-        :return:
         """
         if self.instance is None:
             self.instance = Schiffsboerse
